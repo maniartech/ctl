@@ -1,0 +1,65 @@
+<!-- Request a Quote Modal -->
+<div class="modal fade" id="requestQuoteModal" tabindex="-1" aria-labelledby="requestQuoteModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="requestQuoteModalLabel">Request a Quote</h5>
+        <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </a>
+      </div>
+      <div class="modal-body">
+        <form id="requestQuoteForm">
+          <div class="row g-4">
+            <div class="col-6">
+              <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="name" placeholder="Name" required>
+            </div>
+
+            <div class="col-6">
+              <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="col-6">
+              <label for="phone" class="form-label">Contact No <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="phone" placeholder="Contact No" required>
+            </div>
+
+            <div class="col-6">
+              <label for="company" class="form-label">Organization Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="company" placeholder="Organization Name" required>
+            </div>
+
+            <div class="col-12">
+              <label for="service" class="form-label">Service</label>
+              <select class="form-control" aria-label="Select Service">
+                <option selected disabled>Select Service</option>
+                <option value="1">Service 1</option>
+                <option value="2">Service 2</option>
+                <option value="3">Service 3</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+
+            <div class="col-12">
+              <label for="attachments" class="form-label">Attachments</label>
+              <input type="file" class="form-control" id="attachments" multiple>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Request a Quote Modal -->

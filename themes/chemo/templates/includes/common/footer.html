@@ -1,0 +1,62 @@
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- Logo and Mission -->
+      <div class="col-lg-4 col-md-12">
+        <div class="footer-logo mb-4">
+          <img src="{% assets 'images/logo-white.png' %}" alt="Chemo Test Laboratory">
+        </div>
+        <p>To help our customers fulfill their Analytical Testing needs & to remain committed to high standards
+          of services by employing stringent quality measures.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/about/organisation-overview/">Organization Overview</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/career/">Career</a></li>
+          <br />
+          <li><a href="/about/gallery/">Gallery</a></li>
+          <li><a href="/about/accreditation/">Accreditation</a></li>
+          <li><a href="/about/testimonials/">Testimonials</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="col-lg-4 col-md-6">
+        <h6>Contact</h6>
+        <p class="text-bold">Office 1: Pusalkar house, JB Road, Sewri, Mumbai - 400015</p>
+        <p class="text-bold">Office 2: C-258, TTC Ind Area, Pawane, Navi Mumbai - 400705</p>
+        <p class="text-bold">Phone No: 024110522, 9324811704, 9324427050, 8928624079</p>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom mt-4">
+      <p>© <span id="currentYear"></span> Chemo Testing Laboratory. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+{% block script %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var yearSpan = document.getElementById('currentYear');
+    var currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+  });
+</script>
+
+{% endblock %}
+<!-- Footer -->

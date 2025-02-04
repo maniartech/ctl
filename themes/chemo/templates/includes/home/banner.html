@@ -1,0 +1,38 @@
+<!-- Banner -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center py-4">
+      <!-- Text Content Column -->
+      <div class="col-lg-6 col-md-7 col-sm-12">
+        <div class="hero-content">
+          <h1 data-aos="fade-up" data-aos-duration="1000" class="mb-3">
+            One-Stop Solution for Analytical Testing Services
+          </h1>
+          <p data-aos="fade-up" data-aos-duration="1500" class="mb-4">
+            Testing Laboratory to attend all your Analytical testing needs
+          </p>
+
+          {% include "../common/action.html" %}
+
+          <!-- Certified Logos -->
+          <div
+            class="certified-logos pb-5 mt-5 d-flex flex-wrap justify-content-sm-center justify-content-lg-start align-items-center gap-2"
+            data-aos="fade-up" data-aos-duration="2500">
+            <img src="{% assets 'images/home/nabl.png' %}" alt="NABL Certified" class="m-2" />
+            <img src="{% assets 'images/home/usfda.png' %}" alt="USFDA Certified" class="m-2" />
+            <img src="{% assets 'images/home/fda-maharashtra.png' %}" alt="FDA Maharashtra Certified" class="m-2" />
+            <img src="{% assets 'images/home/iso-9001.png' %}" alt="ISO 9001-2015" class="m-2" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Column -->
+      <div class="col-lg-6 col-md-5 col-sm-12">
+        <div class="hero-image" data-aos="zoom-in-left" data-aos-duration="1000">
+          <img src="{% assets 'images/home/hero.png' %}" alt="Laboratory Equipment" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Banner -->

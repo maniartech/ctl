@@ -1,0 +1,8 @@
+{
+  "name": "chemo-website",
+  "version": "1.0.0",
+  "description": "Chemo Test Laboratory",
+  "main": "index.js",
+  "author": "Nomaan Maniar",
+  "license": "ISC"
+}

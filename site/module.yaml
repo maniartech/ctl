@@ -1,0 +1,14 @@
+# The Taj Mahal Module
+
+name: site
+
+pages:
+  - home                    : /
+  - about                   : /about/
+  - organisation-overview   : /about/organisation-overview/
+  - gallery                 : /about/gallery/
+  - testimonials            : /about/testimonials/
+  - accreditation           : /about/accreditation/
+  - services                : /services/
+  - career                  : /career/
+  - contact                 : /contact/

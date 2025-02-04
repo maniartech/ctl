@@ -1,0 +1,69 @@
+<section class="section section-gap">
+  <div class="container">
+    <div class="section-content text-center mb-5">
+      <h2 class="heading" data-aos="fade-up" data-aos-duration="1000">Our Licenses and Certifications</h2>
+    </div>
+
+    <div class="pdf-gallery mt-5">
+      <div class="pdf-thumbnail" data-toggle="modal" data-target="#pdfModal" data-pdf="food-drugs.pdf"
+        style="cursor: pointer;">
+        <img src="{%assets 'images/accreditation/fda-maharashtra-logo.png' %}" alt="PDF Thumbnail">
+        <div class="overlay"></div>
+        <i class="fas fa-link link-icon"></i>
+        <h4>Food & Drug Administration</h4>
+      </div>
+
+      <div class="pdf-thumbnail" data-toggle="modal" data-target="#pdfModal" data-pdf="nabl-sewri.pdf"
+        style="cursor: pointer;">
+        <img src="{%assets 'images/accreditation/nabl-logo.png' %}" alt="PDF Thumbnail">
+        <div class="overlay"></div>
+        <i class="fas fa-link link-icon"></i>
+        <h4>ISO/IEC 17025 NABL, India</h4>
+      </div>
+
+      <div class="pdf-thumbnail" data-toggle="modal" data-target="#pdfModal" data-pdf="iso-certificate.pdf"
+        style="cursor: pointer;">
+        <img src="{%assets 'images/accreditation/iso-9001-logo.png' %}" alt="PDF Thumbnail">
+        <div class="overlay"></div>
+        <i class="fas fa-link link-icon"></i>
+        <h4>ISO 9001</h4>
+      </div>
+
+      <div class="pdf-thumbnail" data-toggle="modal" data-target="#pdfModal" data-pdf="usfda.pdf" style="cursor: pointer;">
+        <img src="{%assets 'images/accreditation/usfda-logo.jpg' %}" alt="PDF Thumbnail">
+        <div class="overlay"></div>
+        <i class="fas fa-link link-icon"></i>
+        <h4>USFDA Registered</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
+  <div class="close-button">
+    <a href="#" class="close bg-primary" data-dismiss="modal" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="">
+        <iframe id="pdfViewer" src="" width="100%" height="600px"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% block scripts %}
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    $('#pdfModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget);
+      var pdf = button.data('pdf');
+      var modal = $(this);
+      modal.find('#pdfViewer').attr('src', '{%assets "images/accreditation/' + pdf + '" %}');
+    });
+  </script>
+{% endblock %}

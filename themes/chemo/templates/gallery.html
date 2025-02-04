@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %} Gallery {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="https://unpkg.com/nanogallery2/dist/css/nanogallery2.min.css">
+{% endblock %}
+
+{% block content %}
+
+  {% include "includes/gallery/banner.html" %}
+
+  <div class="chemo-gallery">
+    {% include "includes/gallery/lab.html" %}
+
+    {% include "includes/gallery/mangt.html" %}
+
+    {% include "includes/gallery/fun.html" %}
+  </div>
+
+  {% include "includes/common/cta.html" %}
+
+{% block script %}
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include nanogallery2 CSS and JS -->
+<script src="https://unpkg.com/nanogallery2/dist/jquery.nanogallery2.min.js"></script>
+{% endblock %}
+
+
+{% endblock %}
