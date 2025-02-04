@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Head -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Chemo Test Laboratory</title>
+
+  <!-- CSS ============================================ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet">
+  <link rel="icon" href="/themes/chemo/assets/images/fav.png" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link href="/themes/chemo/assets/scss/helper/helper.css" rel="stylesheet">
+  <link href="/themes/chemo/assets/scss/style.css" rel="stylesheet">
+
+   
+
+  <!-- End CSS ============================================ -->
+
+  <!-- JS ============================================ -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+</head>
+<!-- Head -->
+
+	<body>
+	<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light p-4">
+  <div class="container">
+    <a class="navbar-brand d-none d-md-block" href="/">
+      <img src="/themes/chemo/assets/images/logo.png" class="image-fluid" alt="Chemo Test Laboratory">
+    </a>
+    <a class="navbar-brand d-md-none mx-auto" href="/">
+      <img src="/themes/chemo/assets/images/logo-mobile.png" class="image-fluid" alt="Chemo Test Laboratory">
+    </a>
+    <a class="ham-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item drop-down">
+          <a class="nav-link dropdown-toggle" href="/about/" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">About Us</a>
+
+          <ul class="dropdown-menu">
+            <a class="nav-link" href="/about/">About Us</a>
+            <li><a class="dropdown-item" href="/about/organisation-overview/">Organisation Overview</a></li>
+            <li><a class="dropdown-item" href="/about/gallery/">Gallery</a></li>
+            <li><a class="dropdown-item" href="/about/testimonials/">Testimonials</a></li>
+            <li><a class="dropdown-item" href="/about/accreditation/">Accreditation</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/services/">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/career">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start bg-secondary" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas-header">
+    <img src="/themes/chemo/assets/images/logo-white-mobile.png" alt="Chemo Test Laboratory">
+    <a href="#" class="close" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item drop-down">
+        <a class="nav-link dropdown-toggle" href="/about/" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">About us</a>
+        <ul class="dropdown-menu">
+          <a class="dropdown-item" href="/about/">About Us</a>
+          <li><a class="dropdown-item" href="/about/organisation-overview/">Organisation Overview</a></li>
+          <li><a class="dropdown-item" href="/about/gallery/">Gallery</a></li>
+          <li><a class="dropdown-item" href="/about/testimonials/">Testimonials</a></li>
+          <li><a class="dropdown-item" href="/about/accreditation/">Accreditation</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/services/">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/career/">Career</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/">Contact us</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Header -->
+
+<script>
+  $(document).ready(function() {
+    function setActiveLink() {
+      var currentUrl = window.location.pathname;
+      $('.navbar-nav .nav-link').each(function() {
+        if ($(this).attr('href') === currentUrl) {
+          $(this).addClass('active');
+        } else {
+          $(this).removeClass('active');
+        }
+      });
+    }
+
+    setActiveLink();
+
+    $(window).on('popstate', function() {
+      setActiveLink();
+    });
+  });
+</script>
+	  
+
+	<!-- Main -->
+	<main id="main" class="page-wrapper">
+		
+
+<!-- Banner -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center py-4">
+      <!-- Text Content Column -->
+      <div class="col-lg-6 col-md-7 col-sm-12">
+        <div class="hero-content">
+          <h1 data-aos="fade-up" data-aos-duration="1000" class="mb-3">
+            One-Stop Solution for Analytical Testing Services
+          </h1>
+          <p data-aos="fade-up" data-aos-duration="1500" class="mb-4">
+            Testing Laboratory to attend all your Analytical testing needs
+          </p>
+
+          <!-- Action Buttons -->
+<div class="actions" data-aos="fade-up" data-aos-duration="2000">
+  <button class="btn btn-secondary" onclick="window.open('/themes/chemo/assets/images/ctl-brochure.pdf', '_blank')">Download
+    Brochure</button>
+  <button class="btn btn-white" data-bs-toggle="modal" data-bs-target="#requestQuoteModal">Request a Quote</button>
+</div>
+
+          <!-- Certified Logos -->
+          <div
+            class="certified-logos pb-5 mt-5 d-flex flex-wrap justify-content-sm-center justify-content-lg-start align-items-center gap-2"
+            data-aos="fade-up" data-aos-duration="2500">
+            <img src="/themes/chemo/assets/images/home/nabl.png" alt="NABL Certified" class="m-2" />
+            <img src="/themes/chemo/assets/images/home/usfda.png" alt="USFDA Certified" class="m-2" />
+            <img src="/themes/chemo/assets/images/home/fda-maharashtra.png" alt="FDA Maharashtra Certified" class="m-2" />
+            <img src="/themes/chemo/assets/images/home/iso-9001.png" alt="ISO 9001-2015" class="m-2" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Column -->
+      <div class="col-lg-6 col-md-5 col-sm-12">
+        <div class="hero-image" data-aos="zoom-in-left" data-aos-duration="1000">
+          <img src="/themes/chemo/assets/images/home/hero.png" alt="Laboratory Equipment" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Banner -->
+
+<!--Clients -->
+<section class="brand-section my-5 pt-4 client-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Header -->
+      <div class="col-sm-12 col-lg-12">
+        <h4 class="heading text-center">SOME OF THE BEST CLIENTS WE SERVE</h4>
+      </div>
+      <!-- Header -->
+
+      <!-- Brand Images -->
+      <div class="brands justify-content-sm-center" data-aos="fade-up" data-aos-duration="1000">
+        <div class="col-6 col-sm-2 col-lg-2 mb-5"><img src="/themes/chemo/assets/images/home/clients/p_g.png" alt="Merck / P & G" class="img-fluid"></div>
+        <div class="col-6 col-sm-2 col-lg-2 mb-5"><img src="/themes/chemo/assets/images/home/clients/glenmark.png" alt="Glenmark" class="img-fluid"></div>
+        <div class="col-6 col-sm-2 col-lg-2 mb-5"><img src="/themes/chemo/assets/images/home/clients/usv.png" alt="USV Privite Limited" class="img-fluid"></div>
+        <div class="col-6 col-sm-2 col-lg-2 mb-5"><img src="/themes/chemo/assets/images/home/clients/zuventus.png" alt="Zuventus Healthcare" class="img-fluid"></div>
+        <div class="col-6 col-sm-2 col-lg-2 mb-5"><img src="/themes/chemo/assets/images/home/clients/bharat_serum.png" alt="Bharat Serums"  class="img-fluid"></div>
+        <div class="col-6 col-sm-2 col-lg-2 mb-5"><img src="/themes/chemo/assets/images/home/clients/wockhardt.png" alt="Wockhardt" class="img-fluid"></div>
+      </div>
+      <!-- Brand Images -->
+    </div>
+  </div>
+</section>
+<!-- Clients -->
+
+<!-- About  -->
+<section class="section section-gap-bottom about-section">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-xs-12 col-sm-7 col-lg-6 order-sm-1 order-lg-1">
+        <div class="section-content" data-aos="fade-left" data-aos-duration="1000">
+          <h4 class="sub-heading">Who We Are</h4>
+          <h2 class="heading">A Credible Testing Laboratory</h2>
+
+          <ul class="list-unstyled list-style">
+            <li>
+              <span class="list-icon primary-color">
+                <i aria-hidden="true" class="fas fa-check"></i>
+              </span>
+               More than 4 decades of testing experience</li>
+            <li>
+              <span class="list-icon primary-color">
+                <i aria-hidden="true" class="fas fa-check"></i>
+              </span>
+              Sophisticated instrumentation and set up as per the latest norms
+            </li>
+            <li>
+              <span class="list-icon primary-color">
+                <i aria-hidden="true" class="fas fa-check"></i>
+              </span>
+              All testing solutions under one roof
+            </li>
+            <li>
+              <span class="list-icon primary-color">
+                <i aria-hidden="true" class="fas fa-check"></i>
+              </span>
+              Instrumentation includes but not limited to LCMSMS, GCMSMS, HPLC, GC, ICP, UV-Vis spec, FTIR, ATR,
+              Particle size analyser, Ion chromatograph, Dissolution apparatus, State of the art Microbiological
+              facility, Stability chambers etc.
+            </li>
+            <li>
+              <span class="list-icon primary-color">
+                <i aria-hidden="true" class="fas fa-check"></i>
+              </span>
+              Govt. approved, QMS certified lab
+            </li>
+          </ul>
+          <a type="button" class="btn primary-btn" href="/about/">Know More
+            <i aria-hidden="true" class="fas fa-arrow-right pl-1"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-lg-6 my-5 order-sm-2 order-lg-2">
+        <div class="about-image text-center" data-aos="fade-right" data-aos-duration="1000">
+          <img src="/themes/chemo/assets/images/home/home-aboutus.png" alt="Laboratory" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About -->
+
+<!-- Services -->
+<section id="services" class="section section-gap" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-header text-center mb-5">
+          <h4 class="sub-heading">What We Do</h4>
+          <h2 class="heading">Committed To Quality</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i aria-hidden="true" class="fas fa-pump-medical"></i>
+            </div>
+            <h3>Pharmaceutical & Cosmetics Testing</h3>
+            <p> Qualitative and quantitative tests both chemical and microbiological</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i aria-hidden="true" class="fas fa-cubes"></i>
+            </div>
+            <h3>Food & Agriculture Testing</h3>
+            <p>Qualitative and quantitative tests both chemical and microbiological, Nutritional labelling etc.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i aria-hidden="true" class="fas fa-globe"></i>
+            </div>
+            <h3>Packaging material Testing</h3>
+            <p>Physical tests and chemical tests.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i aria-hidden="true" class="fas fa-folder-open"></i>
+            </div>
+            <h3>Impurity and Elemental Profiling</h3>
+            <p>Using Chromatographic methods likes HPLC, LCMSMS, GCMSMS</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i aria-hidden="true" class="fas fa-vector-square"></i>
+            </div>
+            <h3>Medical devices Testing</h3>
+            <p>For microbial contamination, BET, physical tests etc.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i aria-hidden="true" class="fas fa-window-restore"></i>
+            </div>
+            <h3>Container stuffing & sealing</h3>
+            <p>For Export oriented services</p>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+          <a type="button" class="btn primary-btn text-center" href="/services/">See All Services <i aria-hidden="true"
+              class="fas fa-arrow-right pl-1"></i> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services -->
+
+<!-- Achievements -->
+<section id="achievements" class="section section-gap achievements-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-lg-6 section-content" data-aos="fade-left" data-aos-duration="1000">
+        <h2 class="heading">Our Achievements, So Far!</h2>
+        <p class="desc">Our mission, Vision and philosophy has helped us grow into various horizons while maintaining the customer
+          satisfaction and commitment.</p>
+        <ul class="list-unstyled list-style">
+          <li class="secondary-color text-bold">
+            <span class="list-icon primary-color">
+                <i aria-hidden="true" class="fas fa-check-circle"></i>
+              </span>
+            Years of Experience 35+</li>
+          <li class="secondary-color text-bold">
+            <span class="list-icon primary-color">
+                <i aria-hidden="true" class="fas fa-check-circle"></i>
+              </span>
+            Client satisfaction 90%</li>
+          <li class="secondary-color text-bold">
+            <span class="list-icon primary-color">
+                <i aria-hidden="true" class="fas fa-check-circle"></i>
+              </span>
+            Samples tested 1 Millon +</li>
+          <li class="secondary-color text-bold">
+            <span class="list-icon primary-color">
+                <i aria-hidden="true" class="fas fa-check-circle"></i>
+              </span>
+            Clients 400+</li>
+        </ul>
+      </div>
+      <div class="offset-lg-1 col-xs-12 col-sm-6 col-lg-4 pl-lg-5">
+        <div class="features-cards" data-aos="fade-right" data-aos-duration="500">
+          <div class="card bg-secondary" data-aos="flip-left" data-aos-duration="2000">
+            <h3 class="text-white">35+</h3>
+            <p class="text-white">Years of Experience</p>
+          </div>
+
+          <div class="card" data-aos="flip-right" data-aos-duration="2200">
+            <h3>90%</h3>
+            <p>Client Satisfaction</p>
+          </div>
+
+          <div class="card" data-aos="flip-right" data-aos-duration="2500">
+            <h3>1M+</h3>
+            <p>Samples Tested</p>
+          </div>
+
+          <div class="card bg-primary" data-aos="flip-left" data-aos-duration="2700">
+            <h3 class="text-white">400+</h3>
+            <p class="text-white">Clients</p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Achievements -->
+
+<!-- Certificate -->
+<section class="section-gap certificate-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xs-12 col-sm-12 col-lg-5 section-content" data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="heading">Certificate of Appreciation</h2>
+        <p class="desc">In recognition of outstanding contributions towards Indirect Taxes received a Certificate of Appreciation from the
+        Ministry of Finance.</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-lg-7 certificate-image ml-5 pl-5 pt-sm-5" data-aos="fade-left" data-aos-duration="1000">
+        <img src="/themes/chemo/assets/images/home/certificate-of-appreciation.jpg" alt="Certificate of Appreciation" class="img-fluid" />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Certificate -->
+
+<!-- Director -->
+<section class="section testimonial-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-sm-6 col-lg-5 testimonial-image order-2 order-sm-1 order-lg-1">
+        <img src="/themes/chemo/assets/images/home/businessMan.png" alt="Dr. Atul Pusalkar" class="img-fluid" data-aos="fade-right" data-aos-duration="1000">
+      </div>
+      <div class="col-12 offset-lg-2 col-sm-6 col-lg-5 testimonial-content order-1 order-sm-2 order-lg-2" data-aos="fade-left" data-aos-duration="1000">
+        <p class="desc">"Our mission is to enhance quality of our testing services and our customer’s satisfaction with our
+          philosophy 3C – Commitment, Consistency and Credibility. Working with all our customers, we aim to grow
+          sustainably with the industry"</p>
+        <p class="author">Dr. Atul Pusalkar ( Director)</p>
+        <div>
+          <a href="/about/" class="btn primary-btn">Know More <i class="fas fa-arrow-right pl-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Director -->
+
+
+	</main>
+	<!-- Main -->
+
+	<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- Logo and Mission -->
+      <div class="col-lg-4 col-md-12">
+        <div class="footer-logo mb-4">
+          <img src="/themes/chemo/assets/images/logo-white.png" alt="Chemo Test Laboratory">
+        </div>
+        <p>To help our customers fulfill their Analytical Testing needs & to remain committed to high standards
+          of services by employing stringent quality measures.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/about/organisation-overview/">Organization Overview</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/career/">Career</a></li>
+          <br />
+          <li><a href="/about/gallery/">Gallery</a></li>
+          <li><a href="/about/accreditation/">Accreditation</a></li>
+          <li><a href="/about/testimonials/">Testimonials</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="col-lg-4 col-md-6">
+        <h6>Contact</h6>
+        <p class="text-bold">Office 1: Pusalkar house, JB Road, Sewri, Mumbai - 400015</p>
+        <p class="text-bold">Office 2: C-258, TTC Ind Area, Pawane, Navi Mumbai - 400705</p>
+        <p class="text-bold">Phone No: 024110522, 9324811704, 9324427050, 8928624079</p>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom mt-4">
+      <p>© <span id="currentYear"></span> Chemo Testing Laboratory. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var yearSpan = document.getElementById('currentYear');
+    var currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+  });
+</script>
+
+
+<!-- Footer -->
+
+	<!-- Request a Quote Modal -->
+<div class="modal fade" id="requestQuoteModal" tabindex="-1" aria-labelledby="requestQuoteModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="requestQuoteModalLabel">Request a Quote</h5>
+        <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </a>
+      </div>
+      <div class="modal-body">
+        <form id="requestQuoteForm">
+          <div class="row g-4">
+            <div class="col-6">
+              <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="name" placeholder="Name" required>
+            </div>
+
+            <div class="col-6">
+              <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="col-6">
+              <label for="phone" class="form-label">Contact No <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="phone" placeholder="Contact No" required>
+            </div>
+
+            <div class="col-6">
+              <label for="company" class="form-label">Organization Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="company" placeholder="Organization Name" required>
+            </div>
+
+            <div class="col-12">
+              <label for="service" class="form-label">Service</label>
+              <select class="form-control" aria-label="Select Service">
+                <option selected disabled>Select Service</option>
+                <option value="1">Service 1</option>
+                <option value="2">Service 2</option>
+                <option value="3">Service 3</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+
+            <div class="col-12">
+              <label for="attachments" class="form-label">Attachments</label>
+              <input type="file" class="form-control" id="attachments" multiple>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Request a Quote Modal -->
+
+	<!-- JS ============================================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="/themes/chemo/assets/js/custom.js"></script>
+
+	  
+
+	</body>
+
+</html>
