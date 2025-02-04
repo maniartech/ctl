@@ -10,7 +10,7 @@ modules:
 
 publicDir: public
 
-buildDir: live
+buildDir: docs
 
 404Page: ~/themes/standard/404.html
 
