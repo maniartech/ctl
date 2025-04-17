@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Chemo Test Laboratory</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#mobile-menu-btn").click(function () {
+                $("nav").slideToggle()
+            })
+
+            $(".industries-we-serve-card").mouseenter(function () {
+                $(this).find("p").slideDown()
+            })
+
+            $(".industries-we-serve-card").mouseleave(function () {
+                $(this).find("p").slideUp()
+            })
+        })
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            function startCounter($element) {
+                var $this = $element,
+                    countTo = parseFloat($this.attr('data-countto')),
+                    duration = parseInt($this.attr('data-duration')) || 8000,
+                    start = parseFloat($this.text().replace(/[\+\%]/g, ''));
+
+                $({ counter: start }).animate({
+                    counter: countTo
+                }, {
+                    duration: duration,
+                    easing: 'linear',
+                    step: function () {
+                        var formattedNumber = Math.round(this.counter);
+                        var suffix = $this.text().match(/[\+\%]/g);
+                        $this.text(formattedNumber + (suffix ? suffix[0] : ''));
+                    },
+                    complete: function () {
+                        var formattedNumber = Math.round(this.counter);
+                        var suffix = $this.text().match(/[\+\%]/g);
+                        $this.text(formattedNumber + (suffix ? suffix[0] : ''));
+                    }
+                });
+            }
+
+            // Initialize counters when they come into view
+            $('.counter').each(function () {
+                var $this = $(this);
+
+                // Check if element is in viewport
+                function isInViewport() {
+                    var elementTop = $this.offset().top,
+                        elementBottom = elementTop + $this.outerHeight(),
+                        viewportTop = $(window).scrollTop(),
+                        viewportBottom = viewportTop + $(window).height();
+
+                    return elementBottom > viewportTop && elementTop < viewportBottom;
+                }
+
+                // Start counter when element is in viewport
+                function checkCounter() {
+                    if (isInViewport()) {
+                        startCounter($this);
+                        $(window).off('scroll', checkCounter);
+                    }
+                }
+
+                // Check on scroll and on page load
+                $(window).on('scroll', checkCounter);
+                checkCounter(); // Initial check
+            });
+        });
+    </script>
+
+    <style>
+        .bullets-points-grid .bullets-points-item p {
+            color: black;
+            margin: 0%;
+            padding: 0%;
+            font-weight: 400;
+            font-weight: 500;
+        }
+    </style>
+    <style>
+        .industries-we-serve-card-caption {
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            margin-right: 0;
+            border-radius: 5px;
+            right: 0;
+        }
+    </style>
+
+    <style>
+        .scrolling-img-container {
+            overflow: hidden;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px 0;
+          }
+          
+          .scrolling-img-list {
+            display: flex;
+            width: max-content;
+            animation: scrollLeft 32s linear infinite;
+          }
+          
+          .scrolling-img-list img {
+            height: 60px;
+            margin: 0 20px;
+            object-fit: contain;
+          }
+          
+          /* Keyframes */
+          @keyframes scrollLeft {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand-link">
+                <img class="navbar-brand" src="./img/chemo-logo.png" alt="Chemo Test Laboratory logo" srcset="">
+            </a>
+
+            <span class="mobile-menu-btn-wrapper">
+                <img id="mobile-menu-btn" src="./icons/menu.svg" alt="" srcset="">
+            </span>
+            <nav>
+                <ul class="primary-nav">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link nav-link-active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about-us.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./chemo-test-way.html" class="nav-link">Chemo Test Way</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./career.html" class="nav-link">Career</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./contact-us.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <img src="./img/homepage-banner.jpg" alt="" class="section-img">
+        <img src="./img/homepage-banner-mobile.jpg" alt="" class="section-img-mobile">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h1 class="section-header-title">
+                    One-Stop Solution for Analytical Testing Services
+                </h1>
+                <p class="section-header-description">
+                    Comprehensive Analysis. Trusted Results.
+                </p>
+
+                <div class="hero-section-cta-wrapper" style="display: none;">
+                    <a href="#" class="cta download-brochure-cta hero-section-cta">
+                        Download Brochure
+                    </a>
+                    <!-- <a href="#" class="cta request-quote-cta hero-section-cta">
+                        Request a Quote
+                    </a> -->
+                </div>
+            </div>
+
+            <div class="contact-info-wrapper  reveal-on-scroll">
+                <div class="contact-info">
+                    <div class="col">
+                        <div class="icon-wrapper">
+                            <img src="./icons/call-us-icon.png" alt="" sizes="" srcset="">
+                        </div>
+                        <div class="col-info">
+                            <h5>Call Us</h5>
+                            <p class="contact-number">+91 9619996332</p>
+                        </div>
+                    </div>
+                    <span class="line"></span>
+                    <div class="col contact-info-col-2">
+                        <div class="icon-wrapper">
+                            <img src="./icons/email-us-icon.png" alt="" srcset="">
+                        </div>
+                        <div class="col-info">
+                            <h5>Email Us</h5>
+                            <p>borna.basu@chemotestlaboratory.com</p>
+                        </div>
+                    </div>
+                    <span class="line"></span>
+
+                    <div class="col contact-info-col-3">
+                        <div class="icon-wrapper">
+                            <img src="./icons/visit-us-icon.png" alt="">
+                        </div>
+                        <div class="col-info">
+                            <h5>Vistis Us</h5>
+                            <p>
+                                Pusalkar House, J.B. Road, Opp. Rly Stn,
+                                Sewri West, Mumbai-400015
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="scrolling-img-container">
+        <div class="scrolling-img-list reveal-on-scroll">
+          <!-- Original 16 images -->
+          <img src="./img/scrolling-image/Ajanta.jpg" alt="">
+          <img src="./img/scrolling-image/Avantor.jpg" alt="">
+          <img src="./img/scrolling-image/Bharat-Serums.jpg" alt="">
+          <img src="./img/scrolling-image/Bliss.jpg" alt="">
+          <img src="./img/scrolling-image/Glenmark.jpg" alt="">
+          <img src="./img/scrolling-image/Godrej.jpg" alt="">
+          <img src="./img/scrolling-image/Haffkine.jpg" alt="">
+          <img src="./img/scrolling-image/LUPIN.jpg" alt="">
+          <img src="./img/scrolling-image/P&G.jpg" alt="">
+          <img src="./img/scrolling-image/QL.jpg" alt="">
+          <img src="./img/scrolling-image/RPG.jpg" alt="">
+          <img src="./img/scrolling-image/Shalina.jpg" alt="">
+          <img src="./img/scrolling-image/Sun.jpg" alt="">
+          <img src="./img/scrolling-image/USV.jpg" alt="">
+          <img src="./img/scrolling-image/Wockhardt.jpg" alt="">
+          <img src="./img/scrolling-image/Zuventus.jpg" alt="">
+      
+          <!-- Duplicate 16 images again -->
+          <img src="./img/scrolling-image/Ajanta.jpg" alt="">
+          <img src="./img/scrolling-image/Avantor.jpg" alt="">
+          <img src="./img/scrolling-image/Bharat-Serums.jpg" alt="">
+          <img src="./img/scrolling-image/Bliss.jpg" alt="">
+          <img src="./img/scrolling-image/Glenmark.jpg" alt="">
+          <img src="./img/scrolling-image/Godrej.jpg" alt="">
+          <img src="./img/scrolling-image/Haffkine.jpg" alt="">
+          <img src="./img/scrolling-image/LUPIN.jpg" alt="">
+          <img src="./img/scrolling-image/P&G.jpg" alt="">
+          <img src="./img/scrolling-image/QL.jpg" alt="">
+          <img src="./img/scrolling-image/RPG.jpg" alt="">
+          <img src="./img/scrolling-image/Shalina.jpg" alt="">
+          <img src="./img/scrolling-image/Sun.jpg" alt="">
+          <img src="./img/scrolling-image/USV.jpg" alt="">
+          <img src="./img/scrolling-image/Wockhardt.jpg" alt="">
+          <img src="./img/scrolling-image/Zuventus.jpg" alt="">
+        </div>
+      </div>
+      
+
+
+
+    <section class="info-section">
+        <div class="container">
+            <div class="col-left">
+                <div class="info-container reveal-on-scroll">
+                    <h1 class="info-container-title">Welcome to <br>
+                        Chemo Test Laboratory
+                    </h1>
+                    <p class="info-container-descriptions">
+                        Chemo Test Labs brings over 40 years of expertise in materials testing, offering innovative,
+                        multi-disciplinary solutions to engineering and product challenges. With a legacy of excellence,
+                        we set global standards for reliable, and precise testing results.
+                    </p>
+                    <ul class="bullets-points reveal-on-scroll">
+                        <li class="bullets-points-item">
+                            More than 4 decades of testing experience
+                        </li>
+                        <li class="bullets-points-item">
+                            All testing solutions under one roof
+                        </li>
+                        <li class="bullets-points-item">
+                            Govt. approved, QMS certified lab
+                        </li>
+                    </ul>
+
+                    <a href="about-us.html" class="cta know-more-cta">
+                        Know more
+                    </a>
+
+                    <div class="img-grid reveal-on-scroll">
+                        <img src="./img/logo/ISO-9001-2015.png" alt="" class="img-grid-img">
+                        <img src="./img/logo/NABL.png" alt="" class="img-grid-img">
+                        <img src="./img/logo/US-FOOD-&-Drug.png" alt="" class="img-grid-img">
+                        <img src="./img/logo/FDA.png" alt="" class="img-grid-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="info-section-img-wrapper reveal-on-scroll">
+                    <img class="info-section-img" src="./img/Welcome to  Chemo Test Laboratories.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="industries-we-serve-section">
+        <div class="container">
+            <div class="section-header  reveal-on-scroll">
+                <h1 class="section-header-title">
+                    We Offer Wide Variety Of Testing Services
+                </h1>
+            </div>
+            <div class="industries-we-serve-section-grid reveal-on-scroll">
+                <div class="industries-we-serve-section-grid-item">
+                    <p>
+                        Chemo Test Labs partners with diverse industries, providing accurate and tailored testing
+                        solutions to meet their specific needs.
+                    </p>
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/industry-section-grid-img-1.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">API/Formulations
+                                & Cosmetics
+                                Testing
+                            </h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Delivering precise analysis for active pharmaceutical ingredients and cosmetic products,
+                                in line with pharmacopeial and global standards
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/Food & Agriculture Testing.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Food & Agriculture <br>Testing</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Providing comprehensive testing for food quality, safety, and nutritional content to
+                                meet FSSAI and export standards
+
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/Packaging Material Testing.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">
+                                Packaging
+                                Material &
+                                Water Testing</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Ensuring the safety and compatibility of packaging materials and water through rigorous
+                                physical and chemical testing
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="industries-we-serve-section-grid industries-we-serve-section-grid-secondary  reveal-on-scroll">
+                <div class="industries-we-serve-section-grid-item">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/Impurity and Elemental Profiling.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Impurity
+                                Profiling &
+                                Nitrosamine
+                                Testing</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Detecting and quantifying impurities and genotoxic risks, including nitrosamines, using
+                                advanced analytical tools
+
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/Medical Devices  Testing.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Medical Devices <br>
+                                Testing</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Verifying the biocompatibility and safety of medical devices through standardized
+                                physical and chemical evaluations
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/Container Stuffing  & Sealing.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Container Stuffing <br> & Sealing</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Biocompatibility assessments and physicochemical evaluations
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- row 3 -->
+            <div class="industries-we-serve-section-grid industries-we-serve-section-grid-secondary  reveal-on-scroll">
+                <div class="industries-we-serve-section-grid-item">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/industries-home/Elemental-Impurities.jpg" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Elemental
+                                Impurities by ICH
+                                Q3D & WHO
+                                Guidelines</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Assessing toxic elemental impurities in compliance with ICH Q3D and WHO limits to
+                                protect patient safety
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/industries-home/Herbal & Ayurvedic Testing.jpg" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">
+                                Herbal &
+                                Ayurvedic
+                                Testing</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Authenticating traditional formulations with modern analytical methods to meet
+                                regulatory standards and ensure consumer safety
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/industries-home/Environment Monitoring.jpg" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">
+                                Environment
+                                Monitoring &
+                                Microbial
+                                Cleaning
+                                Validation</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Supporting cleanroom and sterile area compliance through continuous environmental
+                                monitoring and microbial validation
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="industries-we-serve-section-grid industries-we-serve-section-grid-secondary  reveal-on-scroll">
+                <div class="industries-we-serve-section-grid-item">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/industries-home/Impurity Profiling.jpg" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Impurity and Elemental <br> Profiling</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Advanced impurity analysis utilizing LC, MS, LC-MS, GC-MS, ICP-OES, ICP-MS, UPLC-MS/MS,
+                                Q-TOF and more
+
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/industries-home/Stability Studies.jpg" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Stability Studies
+                                and Forced
+                                Degradation
+                                Study</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Conducting accelerated and real-time studies to assess product shelf life, integrity,
+                                and degradation pathways
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/industries-home/Analytical-Method-Development.jpg" alt=""
+                                class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Analytical Method
+                                Development &
+                                Validation</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Developing and validating robust, reliable analytical methods tailored to
+                                client-specific formulations and matrices
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/industries-home/Culture-Identification.jpg" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Culture
+                                Identification
+                                up to Species
+                                Level</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Using advanced microbiological techniques to identify microbial cultures down to the
+                                species level for accurate diagnostics
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item  reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/industries-home/Preservative-Efficacy.jpg" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">Preservative
+                                Efficacy &
+                                Challenge
+                                Test</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Evaluating the robustness of antimicrobial preservatives by simulating real-world
+                                microbial challenges
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section our-achievement-section">
+        <div class="container">
+            <div class="col-left">
+                <div class="info-container  reveal-on-scroll">
+                    <h1 class="info-container-title our-achievement-section-title">Our Achievements</h1>
+                    <p class="info-container-descriptions our-achievement-section-description">
+                        Our mission, vision, and philosophy have guided our growth while ensuring unwavering customer
+                        satisfaction and commitment.
+                    </p>
+                </div>
+            </div>
+            <div class="col-right reveal-on-scroll">
+                <ul class="bullets-points bullets-points-grid">
+                    <li class="bullets-points-item">
+                        <h1><span class="counter" data-countto="40" data-duration="1000">0</span>+</h1>
+                        <p> Years of Experience</p>
+                    </li>
+                    <li class="bullets-points-item">
+                        <h1>1 Millon+</h1>
+                        <p> Products tested</p>
+                    </li>
+                    <li class="bullets-points-item">
+                        <h1><span class="counter" data-countto="200" data-duration="1000">0</span>+</h1>
+                        <p> Skilled Professionals</p>
+                    </li>
+                    <li class="bullets-points-item">
+                        <h1><span class="counter" data-countto="500" data-duration="1000">0</span></h1>
+                        <p> Clients</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <img src="./img/footer-logo.png" alt="" class="footer-logo">
+                </div>
+                <div class="footer-line"></div>
+                <div class="col-right">
+                    <p class="footer-description">
+                        To help our customers fulfill their Analytical Testing needs & to remain committed to high
+                        standards of services by employing stringent quality measures.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <ul class="primary-footer-nav">
+                    <li class="primary-footer-nav-item">
+                        <a href="./index.html" class="primary-footer-nav-link">Home</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./about-us.html" class="primary-footer-nav-link">About Us</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./chemo-test-way.html" class="primary-footer-nav-link">Chemo Test Way</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./services.html" class="primary-footer-nav-link">Services</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./career.html" class="primary-footer-nav-link">Career</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./gallery.html" class="primary-footer-nav-link">Gallery</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./accreditation.html" class="primary-footer-nav-link">Accreditations</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./contact-us.html" class="primary-footer-nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-section row container">
+            <span class="copyright-txt">
+               © 2025 Chemo Testing Laboratory. All rights reserved.
+            </span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/100076839134738/about/?_rdr" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/chemo-test-laboratory" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+<script src="./js/script.js"></script>
+
+</html>

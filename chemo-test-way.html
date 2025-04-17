@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/career.css">
+    <title>Chemo Test Laboratory | Career</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#mobile-menu-btn").click(function () {
+                $("nav").slideToggle()
+            })
+        })
+    </script>
+
+    <style>
+        .hero-section {
+            margin-bottom: 0em;
+        }
+
+        .milestone-section {
+            padding: 2em 2em 1em 2em;
+        }
+
+        .industries-we-serve-section .section-header-title {
+            color: #1D156D;
+            max-width: 50%;
+            margin: 1em 0;
+        }
+
+
+
+        .info-section .container {
+            display: grid;
+            place-items: center;
+        }
+
+        .info-section .info-container {
+            margin: 0%;
+            height: 100%;
+            justify-content: center;
+        }
+
+        .heading-wrapper {
+            padding: 3em 0;
+            object-fit: cover;
+            background: none;
+        }
+
+        .heading {
+            font-size: 22px;
+            max-width: 720px;
+        }
+
+
+        @media only screen and (max-width: 600px) {
+            .heading {
+                font-size: 16px;
+                max-width: 720px;
+                text-align: left;
+                padding: 0em 1em;
+            }
+        }
+
+        .chemo-test-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 12px;
+        }
+
+        .primary-card-title {
+            font-size: 16px;
+        }
+
+        .primary-card li {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 500;
+            color: gray;
+        }
+
+        .primary-card ul {
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 3px;
+        }
+
+        .primary-card {
+            border: 1px solid rgba(208, 208, 208, 0.377);
+            padding: 12px 22px;
+            border-radius: 6px;
+            box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+        }
+
+        h1.number {
+            font-size: 42px;
+            margin: 0;
+            color: #f73130;
+        }
+
+
+        .primary-card {
+            width: 100%;
+            padding: 20px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .primary-card:hover {
+            transform: rotateY(10deg) rotateX(5deg) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .primary-card-title,
+        .primary-card .number,
+        .primary-card ul li {
+            transition: transform 0.4s ease;
+        }
+
+        .primary-card:hover .primary-card-title {
+            transform: translateZ(20px);
+        }
+
+        .primary-card:hover .number {
+            transform: translateZ(30px);
+        }
+
+        .primary-card:hover ul li {
+            transform: translateZ(10px);
+        }
+
+        .working-environment-section-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+        }
+
+        img.alcoa-image {
+            max-height: 360px;
+            width: auto;
+        }
+
+        .card-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .secondary-card {
+            padding: 1em;
+        }
+
+        .secondary-card-item-title{ 
+            color: #f73130;
+            font-size: 18px;
+        }
+
+        .secondary-card-item-description {
+            font-size: 16px;
+            line-height: 25px;
+            font-size: 14px;
+            font-weight: 400;
+
+        }
+
+        
+        @media only screen and (max-width: 600px) {
+            .industries-we-serve-section-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1em;
+            }
+
+            .industries-we-serve-section-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1em;
+            }
+
+            .chemo-test-grid {
+                display: grid;
+                grid-template-columns: 1fr!important;
+                gap: 1em;
+            }
+
+            .chemo-test-grid .primary-card {
+                box-sizing: border-box;
+            }
+
+          
+
+            .chemo-test-way-section {
+                padding: 1em;
+            }
+        }
+
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand-link">
+                <img class="navbar-brand" src="./img/chemo-logo.png" alt="Chemo Test Laboratory logo" srcset="">
+            </a>
+
+            <span class="mobile-menu-btn-wrapper">
+                <img id="mobile-menu-btn" src="./icons/menu.svg" alt="" srcset="">
+            </span>
+            <nav>
+                <ul class="primary-nav">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about-us.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./chemo-test-way.html" class="nav-link nav-link-active">Chemo Test Way</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./career.html" class="nav-link">Career</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="./contact-us.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <section class="hero-section">
+        <img src="./img/Organisation-Overview-hero-img.png" alt="" class="section-img">
+        <img src="./img/Career-mobile.jpg" alt="" class="section-img-mobile">
+        <div class="container reveal-on-scroll">
+            <div class="section-header">
+                <h1 class="section-header-title">
+                    Chemo Test Way
+
+                </h1>
+                <p class="section-header-description">
+                    Our adherence to global standards and and data integrity
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section work-with-chemo-test-laboratory">
+        <div class="container">
+            <div class="col-left reveal-on-scroll">
+                <div class="info-container">
+                    <div class="info-group">
+                        <h1 class="info-container-title">
+                            The Chemo Test Way: Standardized & Compliant
+                        </h1>
+                        <p class="info-container-descriptions">
+                            At Chemo Test Laboratory, we foster a positive, results-driven work environment that offers
+                            continuous learning opportunities at every stage. Our workplace culture is built on
+                            collaboration, professional growth, and innovation, ensuring that every team member can
+                            learn, evolve, and thrive.
+                            We take pride in our supportive and inclusive work atmosphere, where colleagues uplift each
+                            other, leaders inspire and motivate, and a secure work environment allows individuals to
+                            excel with confidence.
+
+                        </p>
+                        <p class="info-container-descriptions">
+                            We take pride in our supportive and inclusive work atmosphere, where colleagues uplift each
+                            other, leaders inspire and motivate, and a secure work environment allows individuals to
+                            excel with confidence.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-right reveal-on-scroll">
+                <div class="info-section-img-wrapper">
+                    <img class="info-section-img" src="./img/A unique place to Work with Chemo​ Test Laboratory.png"
+                        alt="" srcset="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="chemo-test-way-section">
+        <div class="container">
+            <div class="chemo-test-grid">
+                <div class="primary-card">
+                    <h1 class="number">01</h1>
+                    <h1 class="primary-card-title">Upgrade & Improve </h1>
+                    <ul>
+                        <li>Our skill & knowledge and
+                            managerial abilities </li>
+                        <li>Quality of work</li>
+                    </ul>
+                </div>
+                <div class="primary-card">
+                    <h1 class="number">02</h1>
+                    <h1 class="primary-card-title">Follow </h1>
+                    <ul>
+                        <li>Verified & well documented
+                            procedures for analysis</li>
+                    </ul>
+                </div>
+                <div class="primary-card">
+                    <h1 class="number">03</h1>
+                    <h1 class="primary-card-title">Maintain </h1>
+                    <ul>
+                        <li>Valid records and documents
+                        </li>
+                        <li>
+                            Quality Management System
+                            ISO 9001:2015 & ISO 17025:2017
+                        </li>
+                    </ul>
+                </div>
+                <div class="primary-card">
+                    <h1 class="number">04</h1>
+                    <h1 class="primary-card-title">Trust </h1>
+                    <ul>
+                        <li>Highest degree of
+                            confidentiality & impartiality
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="industries-we-serve-section working-environment-section">
+        <div class="container">
+            <div class="industries-we-serve-section-grid working-environment-section-grid">
+                <div class="industries-we-serve-section-grid-item reveal-on-scroll">
+                    <h1 class="title">
+                        Our commitment to Data Integrity - The ALCOA++ approach
+                    </h1>
+                    <p class="description">
+                        At Chemo Test Laboratory, data integrity is at the core of our quality commitment. We rigorously
+                        follow the ALCOA++ framework. This structured approach enables us to maintain the highest
+                        standards of reliability and regulatory compliance across every stage of testing and reporting
+                    </p>
+                </div>
+                <div class="img-wrapper">
+                    <img width="100%" src="./img/Untitled-removebg-preview.png" alt="" srcset="" class="alcoa-image">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why work with us? -->
+    <section class="info-section why-work-with-us-section">
+        <div class="container">
+            <div class="col-left">
+                <div class="info-container">
+                    <div class="info-group reveal-on-scroll">
+                        <h1 class="info-container-title">
+                            Robust Access Control for Secure and Compilant Operations
+                        </h1>
+                        <p class="info-container-descriptions">
+                            To maintain data integrity and ensure regulatory compliance, Chemo Test Laboratory
+                            implements a comprehensive user access management system. Each user is assigned specific
+                            roles and privileges based on their responsibilities, with strict controls over login
+                            credentials, role assignment, and password policies. This structured approach supports
+                            traceability, accountability, and adherence to 21 CFR Part 11 guidelines.
+
+                        </p>
+                        <ul class="bullets-points">
+                            <li class="bullets-points-item">
+                                Role-Based Access Control
+                            </li>
+                            <li class="bullets-points-item">
+                                Defined Rights & Privileges
+                            </li>
+                            <li class="bullets-points-item">
+                                Administrator-Only Control
+                            </li>
+                            <li class="bullets-points-item">
+                                21 CFR Part 11 Compliance
+                            </li>
+                            <li class="bullets-points-item">
+                                Password Security Protocol
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-right reveal-on-scroll">
+                <div class="info-section-img-wrapper">
+                    <img class="info-section-img" src="./img/A unique place to Work with Chemo​ Test Laboratory.png"
+                        alt="" srcset="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="card-grid-section">
+        <div class="container">
+            <div class="card-grid-container">
+                <div class="secondary-card">
+                    <h1 class="secondary-card-item secondary-card-item-title">
+                        Separate Logins for User Categories
+                    </h1>
+                    <p class="secondary-card-item secondary-card-item-description">
+                        Distinct login credentials are provided for each user category
+                    </p>
+                </div>
+                <div class="secondary-card">
+                    <h1 class="secondary-card-item secondary-card-item-title">
+                        Audit Trail & Compliance
+                    </h1>
+                    <p class="secondary-card-item secondary-card-item-description">
+                        21 CFR regulations compliant
+                    </p>
+                </div>
+                <div class="secondary-card">
+                    <h1 class="secondary-card-item secondary-card-item-title">
+                        Users are categorized
+                    </h1>
+                    <p class="secondary-card-item secondary-card-item-description">
+                        Administrator; QA Reviewer; Technical Reviewer; QC Reviewer; User/Analyst
+                    </p>
+                </div>
+                <div class="secondary-card">
+                    <h1 class="secondary-card-item secondary-card-item-title">
+                        Role & Privilege
+                        Management
+                    </h1>
+                    <p class="secondary-card-item secondary-card-item-description">
+                        Only Administrators have the authority to add or delete roles and privileges
+
+                    </p>
+                </div>
+                <div class="secondary-card">
+                    <h1 class="secondary-card-item secondary-card-item-title">
+                        Defined Rights &
+                        Privileges
+                    </h1>
+                    <p class="secondary-card-item secondary-card-item-description">
+                        Clear definitions of rights and privileges for each user group
+                    </p>
+                </div>
+                <div class="secondary-card">
+                    <h1 class="secondary-card-item secondary-card-item-title">
+                        Password Validity
+                    </h1>
+                    <p class="secondary-card-item secondary-card-item-description">
+                        Updated every 90 days for security
+                        purposes
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <img src="./img/footer-logo.png" alt="" class="footer-logo">
+                </div>
+                <div class="footer-line"></div>
+                <div class="col-right">
+                    <p class="footer-description">
+                        To help our customers fulfill their Analytical Testing needs & to remain committed to high
+                        standards of services by employing stringent quality measures.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <ul class="primary-footer-nav">
+                    <li class="primary-footer-nav-item">
+                        <a href="./index.html" class="primary-footer-nav-link">Home</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./about-us.html" class="primary-footer-nav-link">About Us</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./chemo-test-way.html" class="primary-footer-nav-link">Chemo Test Way</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./services.html" class="primary-footer-nav-link">Services</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./career.html" class="primary-footer-nav-link">Career</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./gallery.html" class="primary-footer-nav-link">Gallery</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./accreditation.html" class="primary-footer-nav-link">Accreditations</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./contact-us.html" class="primary-footer-nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-section row container">
+            <span class="copyright-txt">
+               © 2025 Chemo Testing Laboratory. All rights reserved.
+            </span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/100076839134738/about/?_rdr" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/chemo-test-laboratory" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script src="./js/script.js"></script>
+
+</html>
