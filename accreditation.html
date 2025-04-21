@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.css">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/accreditation.css">
+    <title>Chemo Test Laboratory | Organization Overview</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#mobile-menu-btn").click(function () {
+                $("nav").slideToggle()
+            })
+        })
+    </script>
+
+    <style>
+        .slider-section .section-header-title {
+            color: #1d156d;
+            width: 100%;
+            max-width: 100%;
+            font-size: 35px;
+        }
+
+        .slider-section {
+            padding: 1em;
+        }
+
+
+        .section-header-title {
+            font-size: 35px;
+        }
+
+        .slider-section .section-header-description {
+            font-size: 16px;
+            color: black;
+            max-width: 600px;
+            font-weight: 500;
+            line-height: 24px;
+            margin: 1em 0 2em 0;
+        }
+
+        .slider-section  {
+            margin: 2em 0;
+        }
+
+        .slider-card img {
+            width: 64%;
+            margin: auto;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .slider-section .section-header-title {
+                color: #1d156d;
+                width: 90%;
+                max-width: 100%;
+                font-size: 22px;
+                line-height: 28px;
+            }
+
+            .section-header-title {
+                font-size: 22px;
+            }
+
+            .our-licenses-and-certifications-section {
+                /* background-repeat: no-repeat; */
+                background-image: url("../img/Background.png");
+                background-image: none;
+                object-fit: cover;
+                background: linear-gradient(0deg, #18214D 2.66%, #FDFCFF 87.47%);
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand-link">
+                <img class="navbar-brand" src="./img/chemo-logo.png" alt="Chemo Test Laboratory logo" srcset="">
+            </a>
+
+            <span class="mobile-menu-btn-wrapper">
+                <img id="mobile-menu-btn" src="./icons/menu.svg" alt="" srcset="">
+            </span>
+            <nav>
+                <ul class="primary-nav">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about-us.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./chemo-test-way.html" class="nav-link">Chemo Test Way</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./career.html" class="nav-link">Career</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./contact-us.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <img src="./img/Accreditation-section-img.png" alt="" class="section-img">
+        <img src="./img/Accreditation-mobile.jpg" alt="" class="section-img-mobile">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-header-title">
+                    Our Licenses and Certifications
+                </h1>
+                <p class="section-header-description">
+                    Backed by trusted accreditations and global quality certifications
+                </p>
+                <div class="hero-section-cta-wrapper" style="display: none;">
+                    <a href="#" class="cta download-brochure-cta">
+                        Download Brochure
+                    </a>
+                    <a href="#" class="cta request-quote-cta">
+                        Request a Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section why-choose-us" style="display: none;">
+        <div class="container">
+            <div class="col-left">
+                <div class="info-container">
+                    <div class="info-group">
+                        <h1 class="info-container-title">
+                            Approved Testing Facility By
+                        </h1>
+                        <ul class="bullets-points">
+                            <li class="bullets-points-item">
+                                NAFDAC - Govt. of Nigeria
+                            </li>
+                            <li class="bullets-points-item">
+                                Ministry of Health - Govt. of Mozambique
+                            </li>
+                            <li class="bullets-points-item">
+                                Survieors France
+                            </li>
+                            <li class="bullets-points-item">
+                                Ministry of Health, Govt. of Ukraine
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="info-section-img-wrapper">
+                    <img class="info-section-img" src="./img/Approved Testing Facility By.png" alt="" srcset="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="slider-section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-header-title">
+                    Approved Testing Facility By
+                </h1>
+                <p class="section-header-description">
+                    We are proud to have received approvals from prominent regulatory bodies and ministries of health worldwide.
+                </p>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="slider-card">
+                            <img src="./img/accreditation/ANARME.png" alt="Sample Image 1">
+                            <!-- <h3>ANARME</h3> -->
+                            <!-- <p>Govt. of Mozambique</p> -->
+                            <div class="approve-badge">APPROVED</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-card">
+                            <img src="./img/accreditation/BOMRA.png" alt="Sample Image 2">
+                            <!-- <h3>BOMRA</h3> -->
+                            <!-- <p>Govt. of Botswana</p> -->
+                            <div class="approve-badge">APPROVED</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-card">
+                            <img src="./img/accreditation/GAMBIA.png" alt="Sample Image 3">
+                            <!-- <h3>GAMBIA</h3> -->
+                            <!-- <p>Govt. Of Gambia </p> -->
+                            <div class="approve-badge">APPROVED</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-card">
+                            <img src="./img/accreditation/MO.png" alt="Sample Image 4">
+                            <!-- <h3>MO</h3> -->
+                            <!-- <p>Govt, of Ukraine</p> -->
+                            <div class="approve-badge">APPROVED</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-card">
+                            <img src="./img/accreditation/National.png" alt="Sample Image 5">
+                            <!-- <h3>NAFDAC</h3> -->
+                            <!-- <p>Govt. of Nigeria</p> -->
+                            <div class="approve-badge">APPROVED</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-card">
+                            <img src="./img/accreditation/Zambia.png" alt="Sample Image 6">
+                            <!-- <h3>ZAMRA</h3> -->
+                            <!-- <p>Govt. of Zambia</p> -->
+                            <div class="approve-badge">APPROVED</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="our-licenses-and-certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-header-title">
+                    Our Licenses and Certifications
+                </h1>
+            </div>
+            <div class="licenses-and-certifications-grid">
+                <div class="licenses-and-certifications-grid-item">
+                    <div class="certificate-img-wrapper">
+                        <!-- <img src="./img/certificates/FDA Maharashtra - cartificate.jpg" alt="" srcset=""> -->
+                        <img src="./img/logo/FDA.png" alt="" srcset="">
+                    </div>
+                    <div class="image-caption">
+                        <h1 class="image-caption-title">
+                            Food & Drug Administration
+                        </h1>
+                    </div>
+                </div>
+                <div class="licenses-and-certifications-grid-item">
+                    <div class="certificate-img-wrapper">
+                        <img src="./img/logo/NABL.png" alt="" srcset="">
+                    </div>
+                    <div class="image-caption">
+                        <h1 class="image-caption-title">
+                            ISO/IEC 17025 NABL, India
+                        </h1>
+                    </div>
+                </div>
+                <div class="licenses-and-certifications-grid-item">
+                    <div class="certificate-img-wrapper">
+                        <img src="./img/logo/ISO-9001-2015.png" alt="" srcset="">
+                    </div>
+                    <div class="image-caption">
+                        <h1 class="image-caption-title">
+                            ISO 9001
+                        </h1>
+                    </div>
+                </div>
+                <div class="licenses-and-certifications-grid-item">
+                    <div class="certificate-img-wrapper">
+                        <img src="./img/logo/US-FOOD-&-Drug.png" alt="" srcset="">
+                    </div>
+                    <div class="image-caption">
+                        <h1 class="image-caption-title">
+                            USFDA registered
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <img src="./img/footer-logo.png" alt="" class="footer-logo">
+                </div>
+                <div class="footer-line"></div>
+                <div class="col-right">
+                    <p class="footer-description">
+                        To help our customers fulfill their Analytical Testing needs & to remain committed to high
+                        standards of services by employing stringent quality measures.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <ul class="primary-footer-nav">
+                    <li class="primary-footer-nav-item">
+                        <a href="./index.html" class="primary-footer-nav-link">Home</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./about-us.html" class="primary-footer-nav-link">About Us</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./chemo-test-way.html" class="primary-footer-nav-link">Chemo Test Way</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./services.html" class="primary-footer-nav-link">Services</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./career.html" class="primary-footer-nav-link">Career</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./gallery.html" class="primary-footer-nav-link">Gallery</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./accreditation.html" class="primary-footer-nav-link">Accreditations</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./contact-us.html" class="primary-footer-nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-section row container">
+            <span class="copyright-txt">
+               © 2025 Chemo Testing Laboratory. All rights reserved.
+            </span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/100076839134738/about/?_rdr" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/chemo-test-laboratory" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                1080: {
+                    slidesPerView: 4.1,
+                    spaceBetween: 20
+                }
+
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+
+</body>
+
+</html>

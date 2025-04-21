@@ -1,0 +1,58 @@
+.hero-section {
+    margin-bottom: 0em;
+}
+
+.milestone-section {
+    padding: 2em 2em 1em 2em;
+}
+
+.industries-we-serve-section .section-header-title {
+    color: #1D156D;
+    max-width: 50%;
+    margin: 1em 0;
+}
+
+.industries-we-serve-section-grid-secondary {
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.info-section .container {
+    display: grid;
+    place-items: center;
+}
+
+.info-section .info-container {
+    margin: 0%;
+    height: 100%;
+    justify-content: center;
+}
+
+.mission-and-vision-section .info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    padding: 0 1em 1em 0;
+    margin: 0em 1em 1em 0em;
+}
+
+@media only screen and (max-width: 600px) {
+    .mission-and-vision-section .info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content !important;
+        padding: 0 1em 0em 0;
+        margin: 0em 1em 0em 0em;
+    }
+
+    .info-section {
+        padding: 1em 1em 0 1em;
+        margin-top: 5em;
+    }
+
+    .industries-we-serve-section {
+        padding: 0 1em 1em 1em;
+    }
+}

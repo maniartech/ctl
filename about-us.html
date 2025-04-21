@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <title>Chemo Test Laboratory | About Us</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#mobile-menu-btn").click(function () {
+                $("nav").slideToggle()
+            })
+
+            $(".industries-we-serve-card").mouseenter(function () {
+                $(this).find("p").slideDown()
+            })
+
+            $(".industries-we-serve-card").mouseleave(function () {
+                $(this).find("p").slideUp()
+            })
+        })
+    </script>
+    <style>
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            display: none;
+        }
+
+        /* ceo message  */
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            display: none;
+        }
+
+        .message-ceo {
+            position: relative;
+        }
+
+        .message-ceo .swiper-button-next,
+        .message-ceo .swiper-button-prev {
+            position: absolute;
+            bottom: 30px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .message-ceo .swiper-button-prev {
+            left: 50%;
+            /* transform: translateX(-70px); */
+            transform: translateX(-38px);
+            top: auto;
+            bottom: -40px;
+        }
+
+        .message-ceo .swiper-button-next {
+            left: 50%;
+            /* transform: translateX(30px); */
+            top: auto;
+            bottom: -40px;
+        }
+
+        .message-ceo .swiper-button-next i,
+        .message-ceo .swiper-button-prev i {
+            font-size: 24px !important;
+            color: #1D156D;
+        }
+
+        .industries-we-serve-section .section-header-title {
+            color: #1D156D;
+            max-width: 60%;
+            margin: 1em 0;
+        }
+    </style>
+
+    <style>
+        @media only screen and (min-width: 1024px) {
+            .desktop-milestone {
+                display: block;
+            }
+
+            .mobile-milestone {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .desktop-milestone {
+                display: none;
+            }
+
+            .mobile-milestone {
+                display: block;
+            }
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand-link">
+                <img class="navbar-brand" src="./img/chemo-logo.png" alt="Chemo Test Laboratory logo" srcset="">
+            </a>
+
+            <span class="mobile-menu-btn-wrapper">
+                <img id="mobile-menu-btn" src="./icons/menu.svg" alt="" srcset="">
+            </span>
+            <nav>
+                <ul class="primary-nav">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./about-us.html" class="nav-link nav-link-active">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./chemo-test-way.html" class="nav-link">Chemo Test Way</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./career.html" class="nav-link">Career</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./contact-us.html" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <img src="./img/about-hero-section-img.png" alt="" class="section-img">
+        <img src="./img/About Us-mobile.jpg" alt="" class="section-img-mobile">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h1 class="section-header-title">
+                    Helping Mankind
+                </h1>
+                <p class="section-header-description">
+                    Pharmaceutical, Drug, Cosmetic, Ayurvedic, Food <br> and Agriculture testing laboratory
+                </p>
+
+                <div class="hero-section-cta-wrapper">
+                    <a href="#" class="cta download-brochure-cta hero-section-cta">
+                        Download Brochure
+                    </a>
+                    <!-- <a href="#" class="cta request-quote-cta hero-section-cta">
+                        Request a Quote
+                    </a> -->
+                </div>
+            </div>
+            <div class="hero-section-header-wrapper reveal-on-scroll">
+                <div class="hero-section-header">
+                    <div class="col-left">
+                        <h1>About <br> Chemo Test Laboratory</h1>
+                    </div>
+                    <div class="col-right">
+                        Established in 1984, Chemo Test Laboratory is a government-approved public testing facility
+                        serving the pharmaceutical, food & agriculture, cosmetics, and water industries with
+                        comprehensive analytical and quality testing solutions.
+
+                        Operating from two independent state-of-the-art units in Sewri and Turbhe, Mumbai, our
+                        laboratory is equipped with advanced divisions for chemical analysis, instrumentation,
+                        microbiology, sterility testing, and stability studies. Each unit is designed to meet
+                        industry-specific requirements, ensuring precise and reliable testing outcomes.
+                        <p>
+
+
+                            Led by a distinguished family of doctorates, Chemo Test Laboratory has been at the forefront
+                            of
+                            quality control and analytical testing for over four decades, supporting national and
+                            international clients with third-party testing, research, and outsourcing solutions.
+                        </p>
+                        Our expertise extends across analytical testing, stability studies, method development &
+                        validation, and area validation, alongside physical inspection, surveys, sampling, and sealing
+                        services.
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="about-wrapper-info-container">
+        <div class="container reveal-on-scroll">
+            <h1 class="title">About Chemo Test Laboratory</h1>
+            <p>
+                Established in 1984, Chemo Test Laboratory is a government approved public testing laboratory catering
+                the need of Drug & Pharmaceutical, Food & Agricultural, Cosmetics, Water industry for its testing
+                services. The laboratory is having two independent premises having Chemical, Instrumentation,
+                Microbiology, Sterility,Stability studies divisions and equipped with all sophisticated instruments.
+            </p>
+            <p>
+                Chaired and Managed by a family of Doctorates, Chemo Test Laboratory has been into the Quality control
+                industry for more than 4 decades, supporting various National and overseas companies for their third
+                party testing, research and outsourcing needs.
+            </p>
+            <p>
+                Chemo Test's business landscape covers analytical testing, stability studies, analytical method
+                development, and validation, area validation, it also covers services like physical inspection, survey,
+                sampling, and sealing.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="milestone-section reveal-on-scroll">
+        <!-- Slider main container -->
+        <div class="swiper desktop-milestone">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="">
+                        <img src="./img/milestone/desktop-milstone-img-1.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="">
+                        <img src="./img/milestone/desktop-milstone-img-2.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="">
+                        <img src="./img/milestone/desktop-milstone-img-3.jpg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+                <i class="fas fa-chevron-left" style="font-size: 24px;"></i>
+            </div>
+            <div class="swiper-button-next">
+                <i class="fas fa-chevron-right" style="font-size: 24px;"></i>
+            </div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+        <!-- Slider main container -->
+        <div class="swiper mobile-milestone">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="">
+                        <img src="./img/milestone/mobile-milstone-img-1.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="">
+                        <img src="./img/milestone/mobile-milstone-img-2.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="">
+                        <img src="./img/milestone/mobile-milstone-img-3.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="">
+                        <img src="./img/milestone/mobile-milstone-img-4.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="">
+                        <img src="./img/milestone/mobile-milstone-img-5.jpg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="">
+                        <img src="./img/milestone/mobile-milstone-img-6.jpg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+                <i class="fas fa-chevron-left" style="font-size: 24px;"></i>
+            </div>
+            <div class="swiper-button-next">
+                <i class="fas fa-chevron-right" style="font-size: 24px;"></i>
+            </div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+
+    </section>
+
+
+
+    <!-- mission and vision -->
+    <section class="info-section mission-and-vision-section">
+        <div class="container">
+            <div class="col-right reveal-on-scroll">
+                <div class="info-section-img-wrapper">
+                    <img class="info-section-img" src="./img/mission-and-vision.png" alt="" srcset="">
+                </div>
+            </div>
+            <div class="col-left reveal-on-scroll">
+                <div class="info-container">
+                    <div class="info-group">
+                        <h1 class="info-container-title">
+                            Our Moto
+                        </h1>
+                        <p class="info-container-descriptions">
+                            <strong>Commitment</strong>: Highest standards of
+                            service
+                        </p>
+                        <p class="info-container-descriptions">
+                            <strong>Consistency</strong>: Uniform testing protocols
+                        </p>
+                        <p class="info-container-descriptions">
+                            <strong>Credibility</strong>: Trust and confidence
+                        </p>
+
+                    </div>
+                    <div class="info-group">
+                        <h1 class="info-container-title">
+                            Our Mission
+                        </h1>
+                        <p class="info-container-descriptions">
+                            To help our customers fulfill their Analytical Testing needs & to remain committed to high
+                            standards of services by employing stringent quality measures.
+                        </p>
+                    </div>
+                    <div class="info-group">
+                        <h1 class="info-container-title">
+                            Our Vision
+                        </h1>
+                        <p class="info-container-descriptions">
+                            To fulfill a latent need for a world class testing lab that offers specialized testing
+                            solution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ceo message start section -->
+    <section class="info-section mission-and-vision-section message-ceo reveal-on-scroll">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="col-right">
+                            <div class="ceo-message-wrapper">
+                                <img src="img/atul-dp.png" alt="" srcset="">
+                            </div>
+
+                        </div>
+                        <div class="col-left">
+                            <div class="info-container">
+                                <div class="info-group">
+                                    <h1 class="info-container-title">
+                                        MD's Message
+                                    </h1>
+                                    <p class="info-container-descriptions">
+                                        Dr. Atul Pusalkar, Managing Director of Chemo Test Laboratory, has been at the
+                                        forefront of testing excellence for over 30 years. His vision has been clear
+                                        from the beginning—to enable and high-quality testing services available to all.
+                                        Under his leadership, Chemo Test has grown into a trusted name in the testing
+                                        space, known for its accuracy, ethical practices, and customer-centric approach.
+                                        <br> <br>
+                                        Atul believes that accurate testing services are the foundation of quality
+                                        products and can make a real difference in people's lives. With state-of-the-art
+                                        equipment, a skilled team, and stringent quality control processes, Chemo Test
+                                        continues to raise the standard for testing labs in the country.
+                                    </p>
+                                    <h4>- Dr. Atul Pusalkar (Managing Director)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="col-right">
+                            <div class="ceo-message-wrapper">
+                                <img src="https://chemotestlaboratory.com/themes/chemo/assets/images/about/ceo.png"
+                                    alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="col-left">
+                            <div class="info-container">
+                                <div class="info-group">
+                                    <h1 class="info-container-title">
+                                        CEO's Message
+                                    </h1>
+                                    <p class="info-container-descriptions">
+                                        For over 35 years, Chemo Test Laboratory has been committed to deliver authentic
+                                        &
+                                        reliable
+                                        results. Our team achieves this by embedding hard work, technology and logical
+                                        thinking
+                                        into
+                                        all its services, even in the highest pressure and time sensitive situations. We
+                                        treat
+                                        all
+                                        clients with highest dedication & responsibility. <br> <br> This approach has
+                                        helped us
+                                        built
+                                        strong
+                                        relationship with our clients, many utilising over services continuously over
+                                        the years.
+                                        We
+                                        pursue continuous growth while adapting and abiding the major changes and
+                                        development in
+                                        the
+                                        industry. We aim to become No. 1 laboratory in customer satisfaction by striving
+                                        to
+                                        create
+                                        and reproduce our services at their best.
+                                    </p>
+                                    <h4>- Dr. Borna Basu (CEO/ Technical Director)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-prev">
+            <i class="fa-regular fa-square-caret-left" style="font-size: 24px;"></i>
+        </div>
+        <div class="swiper-button-next">
+            <i class="fa-regular fa-square-caret-right" style="font-size: 24px;"></i>
+        </div>
+    </section>
+    <!-- ceo message end section -->
+
+    <!-- Industries We Serve -->
+    <section class="industries-we-serve-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h1 class="section-header-title">
+                    Our values are the driving force behind everything we do at Chemo Test Laboratory
+                </h1>
+            </div>
+            <div class="industries-we-serve-section-grid industries-we-serve-section-grid-secondary reveal-on-scroll">
+                <div class="industries-we-serve-section-grid-item">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/Authenticity & Transparency.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">
+                                Authenticity & Transparency</h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Our test results are authentic, scientifically validated, and adhere to strict data
+                                integrity protocols. We prevent data manipulation or leakage by ensuring secure server
+                                connectivity and maintaining a complete audit trail. All reports include chromatograms,
+                                raw data, and worksheets for seamless traceability. Every data set undergoes rigorous
+                                review before submission, ensuring accuracy and reliability.
+
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/Confidentiality & Impartiality.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">
+                                Confidentiality, Impartiality & Data Backup
+                            </h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                We ensure regular data backups via NAS storage, with secure cloud backups for added
+                                protection. Strict protocols uphold impartiality, prevent conflicts of interest, and
+                                maintain complete confidentiality, safeguarding integrity and trust
+
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/Customer Satisfaction & Commitment.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">
+                                Customer Satisfaction & Commitment
+                            </h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                Customer satisfaction is at the core of our organization. Every objective is designed to
+                                prioritize client needs, commitment, and excellence in service delivery.
+
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="industries-we-serve-section-grid-item reveal-on-scroll">
+                    <figure class="industries-we-serve-card">
+                        <div class="figure-img-wrapper">
+                            <img src="./img/Seamless Communication.png" alt="" class="figure-img">
+                        </div>
+                        <figcaption class="industries-we-serve-card-caption">
+                            <h4 class="industries-we-serve-card-caption-item">
+                                Seamless
+                                Communication
+                            </h4>
+                            <p
+                                class="industries-we-serve-card-caption-item industries-we-serve-card-caption-item-description">
+                                All communications are structured for traceability and transparency, ensuring a clear
+                                record of interactions. We prioritize open, two-way communication to foster strong
+                                collaboration with our customers.
+
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <img src="./img/footer-logo.png" alt="" class="footer-logo">
+                </div>
+                <div class="footer-line"></div>
+                <div class="col-right">
+                    <p class="footer-description">
+                        To help our customers fulfill their Analytical Testing needs & to remain committed to high
+                        standards of services by employing stringent quality measures.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <ul class="primary-footer-nav">
+                    <li class="primary-footer-nav-item">
+                        <a href="./index.html" class="primary-footer-nav-link">Home</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./about-us.html" class="primary-footer-nav-link">About Us</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./chemo-test-way.html" class="primary-footer-nav-link">Chemo Test Way</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./services.html" class="primary-footer-nav-link">Services</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./career.html" class="primary-footer-nav-link">Career</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./gallery.html" class="primary-footer-nav-link">Gallery</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./accreditation.html" class="primary-footer-nav-link">Accreditations</a>
+                    </li>
+                    <li class="primary-footer-nav-item">
+                        <a href="./contact-us.html" class="primary-footer-nav-link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-section row container">
+            <span class="copyright-txt">
+                © 2025 Chemo Testing Laboratory. All rights reserved.
+            </span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/100076839134738/about/?_rdr" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/chemo-test-laboratory" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            spaceBetween: 9,
+            loop: true,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+<script src="./js/script.js"></script>
+
+</html>

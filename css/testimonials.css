@@ -1,0 +1,30 @@
+.hero-section {
+    margin-bottom: 0em;
+}
+
+.milestone-section {
+    padding: 2em 2em 1em 2em;
+}
+
+.industries-we-serve-section .section-header-title {
+    color: #1D156D;
+    max-width: 50%;
+    margin: 1em 0;
+}
+
+
+
+.info-section .container {
+    display: grid;
+    place-items: center;
+}
+
+.info-section .info-container {
+    margin: 0%;
+    height: 100%;
+    justify-content: center;
+}
+
+.cta {
+    border: 2px solid #1c156d00;
+}

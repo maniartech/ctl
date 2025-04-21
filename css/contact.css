@@ -1,0 +1,316 @@
+.hero-section {
+    margin-bottom: 0em;
+}
+
+.milestone-section {
+    padding: 2em 2em 1em 2em;
+}
+
+.industries-we-serve-section .section-header-title {
+    color: #1D156D;
+    max-width: 50%;
+    margin: 1em 0;
+}
+
+
+
+.info-section .container {
+    display: grid;
+    place-items: center;
+}
+
+.info-section .info-container {
+    margin: 0%;
+    height: 100%;
+    justify-content: center;
+}
+
+.info-section .info-container .info-group {
+    margin: 1em 0;
+    padding: 1em 0;
+}
+
+.higlight {
+    color: #1D156D;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.get-in-touch-section .info-container-title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.get-in-touch-section {
+    padding-left: 2em;
+    margin-left: 2em;
+    padding-top: 2em;
+}
+
+.get-in-touch-section-title {
+    padding-left: 18px;
+}
+
+.email-link {
+    font-weight: 500;
+    color: #1D156D;
+}
+
+.form-section .info-container-descriptions {
+    margin: 0%;
+}
+
+.info-container-title-secondary {
+    font-size: 18px;
+}
+
+.form-section .info-group {
+    margin: 0% !important;
+    padding: 9px 0% !important;
+}
+
+.form-section .col-right {
+    width: 100%;
+}
+
+.contact-form-wrapper {
+    padding: 3px;
+    /* background: #18214D; */
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form {
+    padding: 1em;
+}
+
+.form-group {
+    display: grid;
+    width: 100%;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding: 6px 0;
+}
+
+.contact-form input {
+    font-size: 16px;
+    padding: 12px 12px;
+    font-weight: 400;
+    color: #1D156D;
+    /* border: 1px solid white; */
+    border: 1px solid #000000;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 70%;
+}
+
+.contact-form textarea {
+    opacity: 70%;
+    /* border: 1px solid white; */
+    border: 1px solid #000000;
+    border-radius: 4px;
+    height: 200px;
+    padding: 12px 12px;
+    font-size: 16px;
+}
+
+.contact-form .row {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.contact-form-wrapper {
+    border-radius: 9px;
+}
+
+@media only screen and (max-width: 600px) {
+    .get-in-touch-section {
+        padding-left: 0em;
+        margin-left: 0em;
+        padding-top: 0em;
+    }
+
+    .get-in-touch-section .info-container-title {
+        font-size: 22px;
+        font-weight: 600;
+        padding: 1em;
+    }
+
+    .get-in-touch-section .info-container-title {
+        font-size: 22px;
+        font-weight: 600;
+        padding: 1em 0;
+    }
+
+    h1.info-container-title.get-in-touch-section-title {
+        margin: 0 1em;
+    }
+
+    .form-section {
+        background-image: url("../img/Background.png");
+        object-fit: cover;
+        background-size: cover;
+    }
+
+    section.info-section.get-in-touch-section {
+        padding: 0;
+    }
+
+    .email-link {
+        font-weight: 500;
+        color: #c2bcfc;
+    }
+
+    .info-container-title {
+        margin-bottom: 1em;
+    }
+}
+
+.form-section {
+    background-image: none !important;
+    object-fit: cover;
+}
+
+.info-section .info-container .info-group {
+    margin: 0px 0;
+    padding: 1em 0;
+}
+
+.get-in-touch-section .info-container-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h1.info-container-title.get-in-touch-section-title {
+    font-size: 28px;
+}
+
+p.info-container-descriptions.get-in-touch-section-description {
+    padding: 0 1em;
+}
+
+.form-section .section-header-wrapper {
+    max-width: 1080px;
+    margin: auto;
+    padding: 0 1em;
+}
+
+.section-title {
+    padding: 0 12px;
+}
+
+.section-title {
+    padding: 0 12px;
+    margin: 0;
+}
+
+.info-container-title {
+    margin: 0%;
+    padding: 0%;
+    color: #1D156D;
+    font-size: 22px;
+}
+
+.info-section {
+    padding: 1em 2em;
+    margin-top: 0em;
+}
+
+.form-section .container {
+    place-items: baseline;
+}
+
+.info-container-title {
+    font-weight: 600;
+}
+
+.contact-form textarea {
+    height: 124px;
+}
+
+.submit-btn {
+    padding: 12px 22px;
+    font-size: 16px;
+    margin: 1em auto;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    /* opacity: 70%; */
+    background-color: #1D156D;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.submit-btn:hover{
+    background-color: #ffffff;
+    color: #1D156D;
+    border: 1px solid #1D156D;
+}
+.submit-wrapper {
+    display: flex;
+}
+
+
+.info-container {
+    padding: 1em 1em 1em 0;
+    margin: 1em;
+}
+
+p.info-container-descriptions.get-in-touch-section-description {
+    padding: 0;
+}
+
+.form-section .info-container {
+    padding: 1em 1em 1em 1em;
+    margin: 1em;
+}
+
+.get-in-touch-section .info-container {
+    padding: 0;
+    margin: 1em;
+}
+
+.get-in-touch-section .info-container {
+    padding: 0;
+    margin: 0;
+}
+
+.form-section .info-container {
+    padding: 0%;
+    margin: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    section.info-section.get-in-touch-section {
+        padding: 1em;
+    }
+
+    h1.info-container-title.get-in-touch-section-title {
+        margin: 0;
+    }
+
+    .info-section {
+        padding: 1em;
+        margin-top: 0em;
+    }
+
+    .form-section .section-header-wrapper {
+        max-width: 1080px;
+        margin: auto;
+        padding: 0%;
+    }
+
+    .section-title {
+        padding: 0px;
+        margin: 1em 0;
+    }
+
+}
