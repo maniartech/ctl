@@ -735,7 +735,7 @@ img.footer-logo {
 
   .industries-we-serve-section-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   footer .row {
@@ -808,6 +808,7 @@ img.footer-logo {
     background-image: url("../img/Background.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    padding-top: 0;
   }
 
   .info-container {
