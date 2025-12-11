@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../ctl-live"
+		},
+		{
+			"path": "../dot-github"
+		}
+	],
+  "settings": {}
+}
