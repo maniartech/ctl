@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Head -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career - Chemo Test Laboratory</title>
+
+  <!-- CSS ============================================ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet">
+  <link rel="icon" href="/themes/chemo/assets/images/fav.png" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link href="/themes/chemo/assets/scss/helper/helper.css" rel="stylesheet">
+  <link href="/themes/chemo/assets/scss/style.css" rel="stylesheet">
+
+   
+
+  <!-- End CSS ============================================ -->
+
+  <!-- JS ============================================ -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+</head>
+<!-- Head -->
+
+	<body>
+	<!-- Cross Ribbon - Desktop only -->
+<div class="cross-ribbon d-none d-md-block">
+  <a href="https://reports.chemotestlaboratory.com/v1/app/chemo/report-checker/" target="_blank"
+    class="cross-ribbon-link">
+    <span>Report Checker</span>
+  </a>
+</div>
+
+<!-- Report Checker Bar -->
+<div class="bar d-block d-md-none">
+  <a href="https://reports.chemotestlaboratory.com/v1/app/chemo/report-checker/" target="_blank"
+    class="link">
+    <i class="fas fa-file-check"></i>
+    <span>Report Checker</span>
+    <span class="new-indicator">NEW</span>
+  </a>
+</div>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light p-4">
+  <div class="container">
+    <a class="navbar-brand d-none d-md-block" href="/">
+      <img src="/themes/chemo/assets/images/logo.png" class="image-fluid" alt="Chemo Test Laboratory">
+    </a>
+    <a class="navbar-brand d-md-none mx-auto" href="/">
+      <img src="/themes/chemo/assets/images/logo-mobile.png" class="image-fluid" alt="Chemo Test Laboratory">
+    </a>
+    <a class="ham-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item drop-down">
+          <a class="nav-link dropdown-toggle" href="/about/" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">About Us</a>
+
+          <ul class="dropdown-menu">
+            <a class="nav-link" href="/about/">About Us</a>
+            <li><a class="dropdown-item" href="/about/organisation-overview/">Organisation Overview</a></li>
+            <li><a class="dropdown-item" href="/about/gallery/">Gallery</a></li>
+            <li><a class="dropdown-item" href="/about/testimonials/">Testimonials</a></li>
+            <li><a class="dropdown-item" href="/about/accreditation/">Accreditation</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/services/">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/career">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start bg-secondary" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas-header">
+    <img src="/themes/chemo/assets/images/logo-white-mobile.png" alt="Chemo Test Laboratory">
+    <a href="#" class="close" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item drop-down">
+        <a class="nav-link dropdown-toggle" href="/about/" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">About us</a>
+        <ul class="dropdown-menu">
+          <a class="dropdown-item" href="/about/">About Us</a>
+          <li><a class="dropdown-item" href="/about/organisation-overview/">Organisation Overview</a></li>
+          <li><a class="dropdown-item" href="/about/gallery/">Gallery</a></li>
+          <li><a class="dropdown-item" href="/about/testimonials/">Testimonials</a></li>
+          <li><a class="dropdown-item" href="/about/accreditation/">Accreditation</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/services/">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/career/">Career</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/">Contact us</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Header -->
+
+<script>
+  $(document).ready(function() {
+    function setActiveLink() {
+      var currentUrl = window.location.pathname;
+      $('.navbar-nav .nav-link').each(function() {
+        if ($(this).attr('href') === currentUrl) {
+          $(this).addClass('active');
+        } else {
+          $(this).removeClass('active');
+        }
+      });
+    }
+
+    setActiveLink();
+
+    $(window).on('popstate', function() {
+      setActiveLink();
+    });
+  });
+</script>
+	  
+
+	<!-- Main -->
+	<main id="main" class="page-wrapper">
+		
+
+<!-- Banner -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center pb-5">
+      <div class="col-12 col-sm-6 col-lg-6">
+        <div class="hero-content">
+          <h1 data-aos="fade-up" data-aos-duration="1000">Join Our Team At CTL</h1>
+          <p  data-aos="fade-up" data-aos-duration="1500">Be a part of CTL family. Let’s grow together</p>
+
+          <!-- Action Buttons -->
+<div class="actions" data-aos="fade-up" data-aos-duration="2000">
+  <button class="btn btn-secondary" onclick="window.open('/themes/chemo/assets/images/ctl-brochure.pdf', '_blank')">Download
+    Brochure</button>
+  <button class="btn btn-white" data-bs-toggle="modal" data-bs-target="#requestQuoteModal">Request a Quote</button>
+</div>
+
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-6 my-5">
+        <div class="hero-image" data-aos="zoom-in-left" data-aos-duration="1000">
+          <img src="/themes/chemo/assets/images/career/banner.png" alt="Laboratory Equipment" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Banner -->
+
+<!-- About -->
+<section class="section section-gap">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-sm-6 col-lg-6 order-2 order-lg-1">
+        <div class="about-image text-center" data-aos="zoom-in-right" data-aos-duration="1000">
+          <img src="/themes/chemo/assets/images/career/unique.png" alt="Laboratory" class="img-fluid" style="width: 80%;">
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-6 order-1 order-lg-2">
+        <div class="section-content" data-aos="zoom-in-left" data-aos-duration="1000">
+          <h2 class="heading">A unique place to Work with Chemo​ Test Laboratory</h2>
+          <p class="desc">A positive and comfortable work environment which facilitates opportunities for learning at each stage to build a strong
+          workplace culture where you can learn, grow and evolve.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About -->
+
+<!-- Work Place -->
+<section class="section section-gap working-environment">
+  <div class="container">
+    <div class="row section-content pb-3">
+      <div class="col-lg-6">
+        <h2 class="heading p-3" data-aos="fade-down" data-aos-duration="1000">A working environment with an unique spirit.</h2>
+      </div>
+      <div class="col-lg-6">
+        <p class="desc p-3" data-aos="fade-up" data-aos-duration="1000">A positive working environment where colleagues are supportive and friendly, leaders and top managers give
+          positive motivation in the workplace, and secure work environment.</p>
+      </div>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="row gy-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="elevated-card" data-aos="flip-left" data-aos-duration="1000">
+          <img src="/themes/chemo/assets/images/career/free-working-style.jpg" alt="Work Environment 1">
+          <div class="overlay" data-aos="fade-up" data-aos-duration="1000">WORK THE WAY YOU LIKE</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="elevated-card" data-aos="flip-right" data-aos-duration="1000">
+          <img src="/themes/chemo/assets/images/career/grow-and-learn.jpg" alt="Work Environment 2">
+          <div class="overlay" data-aos="fade-up" data-aos-duration="1000">GROW & LEARN</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="elevated-card" data-aos="flip-left" data-aos-duration="1000">
+          <img src="/themes/chemo/assets/images/career/experience.jpg" alt="Work Environment 3">
+          <div class="overlay" data-aos="fade-up" data-aos-duration="1000">EXPERIENCE & ENHANCE</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3" data-aos="flip-right" data-aos-duration="1000">
+        <div class="elevated-card">
+          <img src="/themes/chemo/assets/images/career/poineer.jpg" alt="Work Environment 4">
+          <div class="overlay" data-aos="fade-up" data-aos-duration="1000">BECOME A PIONEER</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Work Place -->
+
+<!-- Work With Us -->
+<section class="section section-gap bg-light">
+<div class="container">
+  <div class="row align-items-center">
+    <!-- Left Section: Title, Description, and Features -->
+    <div class="col-12 col-sm-6 col-lg-6">
+      <h2 data-aos="fade-up" data-aos-duration="1000">Why work with us?</h2>
+      <p data-aos="fade-up" data-aos-duration="1000" class="">Would you be like to be part of an organization that is devoted to excellence in quality and uncompromising
+        integrity in its service? Read on...</p>
+      <ul class="features-list list-unstyled list-style">
+        <li class="secondary-color" data-aos="fade-up" data-aos-duration="1500"><i class="fas fa-check-circle primary-color"></i> Work the way you like</li>
+        <li class="secondary-color" data-aos="fade-up" data-aos-duration="1600"><i class="fas fa-check-circle primary-color"></i> Grow and Learn</li>
+        <li class="secondary-color" data-aos="fade-up" data-aos-duration="1700"><i class="fas fa-check-circle primary-color"></i> Experience and Enhance</li>
+        <li class="secondary-color" data-aos="fade-up" data-aos-duration="1800"><i class="fas fa-check-circle primary-color"></i> Become a Pioneer</li>
+        <li class="secondary-color" data-aos="fade-up" data-aos-duration="1900"><i class="fas fa-check-circle primary-color"></i> Excellent Work Vibe</li>
+        <li class="secondary-color" data-aos="fade-up" data-aos-duration="2000"><i class="fas fa-check-circle primary-color"></i> Multi-disciplinary Laboratory</li>
+      </ul>
+    </div>
+
+    <!-- Right Section: Image -->
+    <div class="col-12 col-sm-6 col-lg-6">
+      <div class="image-container">
+        <img src="/themes/chemo/assets/images/career/work-with-us.png" alt="Why Work With Us" class="img-fluid" data-aos="fade-left" data-aos-duration="1000">
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- Work With Us -->
+
+<!-- Drop Resume -->
+<section class="section section-gap">
+<div class="container">
+    <div class="row p-5">
+        <div class="offset-2 col-md-9">
+            <div class="drop-resume-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="drop-resume-icon">
+                    <i class="fa fa-cloud-upload"></i>
+                </div>
+                <div class="text-center">
+                    <h2>Drop your resume application to hr@chemotestlaboratry.com with description and your qualification</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Drop Resume -->
+
+
+	</main>
+	<!-- Main -->
+
+	<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- Logo and Mission -->
+      <div class="col-md-12 col-lg-4">
+        <div class="footer-logo mb-4">
+          <img src="/themes/chemo/assets/images/logo-white.png" alt="Chemo Test Laboratory">
+        </div>
+        <p>To help our customers fulfill their Analytical Testing needs & to remain committed to high standards
+          of services by employing stringent quality measures.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 col-lg-2">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/about/organisation-overview/">Organization Overview</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/career/">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <h6>Other Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="/about/gallery/">Gallery</a></li>
+          <li><a href="/about/accreditation/">Accreditation</a></li>
+          <li><a href="/about/testimonials/">Testimonials</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+          <li><a href="https://customers.chemotestlaboratory.com" target="_blank">Customer Portal</a> <span class="new-indicator">NEW</span></li>
+          <li><a href="https://reports.chemotestlaboratory.com/v1/app/chemo/report-checker/" target="_blank">Report Checker</a><span class="new-indicator">NEW</span></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="col-md-4 col-lg-3">
+        <h6>Contact</h6>
+        <p class="text-bold">Office 1: Pusalkar house, JB Road, Sewri, Mumbai - 400015</p>
+        <p class="text-bold">Office 2: C-258, TTC Ind Area, Pawane, Navi Mumbai - 400705</p>
+        <p class="text-bold">Phone No: 024110522, 9324811704, 9324427050, 8928624079</p>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom mt-4">
+      <p>© <span id="currentYear"></span> Chemo Testing Laboratory.</p>
+
+      <div class="social-icons d-none d-md-block">
+        <a href="https://www.facebook.com/chemotestlab" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/chemo-test-laboratory-961592230" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      <p class="powered-by">Powered by <img src="/themes/chemo/assets/images/mt-logo.png" alt="ManiarTech®"> <a
+          href="https://maniartech.com">ManiarTech</a><sup>®</sup></p>
+
+      <div class="social-icons mt-10 d-md-none">
+        <a href="https://www.facebook.com/chemotestlab" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/chemo-test-laboratory-961592230" target="_blank"><i
+            class="fab fa-linkedin-in"></i></a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var yearSpan = document.getElementById('currentYear');
+    var currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+  });
+</script>
+
+
+<!-- Footer -->
+
+	<!-- Request a Quote Modal -->
+<div class="modal fade" id="requestQuoteModal" tabindex="-1" aria-labelledby="requestQuoteModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="requestQuoteModalLabel">Request a Quote</h5>
+        <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </a>
+      </div>
+      <div class="modal-body">
+        <form id="requestQuoteForm" action="#" method="post">
+          <div class="row g-4">
+            <div class="col-6">
+              <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="name" placeholder="Name" required>
+            </div>
+
+            <div class="col-6">
+              <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="col-6">
+              <label for="phone" class="form-label">Contact No <span class="text-danger">*</span></label>
+              <input type="number" class="form-control" id="phone" placeholder="Contact No" required>
+            </div>
+
+            <div class="col-6">
+              <label for="company" class="form-label">Organization Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="company" placeholder="Organization Name" required>
+            </div>
+
+            <div class="col-12">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Request a Quote Modal -->
+
+	<!-- JS ============================================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="/themes/chemo/assets/js/custom.js"></script>
+
+	  
+
+	</body>
+
+</html>
